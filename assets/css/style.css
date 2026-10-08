@@ -215,3 +215,22 @@ p{margin:0 0 1em}
 .hero .quick-links{margin:1.1rem 0 1.4rem}
 .quick-links .btn{justify-content:center}
 @media (max-width:640px){.quick-links .btn{flex:1 1 calc(50% - .6rem);padding:.9rem 1rem;font-size:1rem}.quick-links .btn-primary,.quick-links .btn:last-child{flex-basis:100%}}
+/* Store product grid (modelled on the old Squarespace store list) */
+.store-head h1{margin-bottom:.4em}
+.store-section{padding-top:2.5rem}
+.store-count{font:500 .85rem/1.2 var(--cond);letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin:0 0 1.2rem}
+.product-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:2.2rem 1.6rem}
+@media (max-width:1000px){.product-list{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:720px){.product-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:1.6rem .9rem}}
+.product-item{display:flex;flex-direction:column;min-width:0}
+.product-link{display:flex;flex-direction:column;flex:1;color:var(--text);text-decoration:none}
+.product-img{position:relative;aspect-ratio:1/1;background:#fff;overflow:hidden}
+.product-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:opacity .35s ease,transform .35s ease}
+.product-img img.alt{opacity:0}
+@media (hover:hover){.product-link:hover .product-img.has-alt img.alt{opacity:1}.product-link:hover .product-img:not(.has-alt) img{transform:scale(1.03)}}
+.product-meta{padding-top:.7rem;display:flex;flex-direction:column;gap:.3rem}
+.product-title{font-size:.98rem;line-height:1.35;color:var(--text)}
+.product-link:hover .product-title{color:var(--green)}
+.product-price{font:500 .95rem/1.2 var(--cond);letter-spacing:.06em;color:var(--amber)}
+.product-btn{margin-top:.8rem;justify-content:center;width:100%}
+@media (max-width:720px){.product-title{font-size:.88rem}.product-btn{font-size:.72rem;padding:.55rem .5rem}}
