@@ -234,3 +234,11 @@ p{margin:0 0 1em}
 .product-price{font:500 .95rem/1.2 var(--cond);letter-spacing:.06em;color:var(--amber)}
 .product-btn{margin-top:.8rem;justify-content:center;width:100%}
 @media (max-width:720px){.product-title{font-size:.88rem}.product-btn{font-size:.72rem;padding:.55rem .5rem}}
+
+/* Winter sweater drop lifestyle banner */
+.winter-banner{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem;max-width:1100px;margin:0 auto 1.8rem}
+.winter-banner a{display:block;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#000;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:border-color .2s,transform .2s}
+.winter-banner a:hover{border-color:var(--amber);color:var(--amber)}
+.winter-banner img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;transition:transform .35s ease}
+@media (hover:hover){.winter-banner a:hover{transform:translateY(-2px)}.winter-banner a:hover img{transform:scale(1.03)}}
+@media (max-width:720px){.winter-banner{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem;margin-bottom:1.4rem}}
